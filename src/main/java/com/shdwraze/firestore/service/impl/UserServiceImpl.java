@@ -19,8 +19,11 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public Flux<User> getUsers() {
-        return userRepository.findAll();
+    public Flux<User> getUsers(String city) {
+        if (city == null) {
+            return userRepository.findAll();
+        }
+        return userRepository.findByHomeAddress_City(city);
     }
 
     @Override

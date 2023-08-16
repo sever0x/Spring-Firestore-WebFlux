@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 
 public interface UserService {
 
-    Flux<User> getUsers();
+    Flux<User> getUsers(String city);
 
     Mono<User> getUserById(String id);
 

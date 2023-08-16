@@ -16,8 +16,8 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public Flux<User> getUsers() {
-        return userService.getUsers();
+    public Flux<User> getUsers(@RequestParam String city) {
+        return userService.getUsers(city);
     }
 
     @GetMapping("/{id}")
