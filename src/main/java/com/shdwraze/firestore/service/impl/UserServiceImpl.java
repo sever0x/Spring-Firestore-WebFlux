@@ -44,6 +44,7 @@ public class UserServiceImpl implements UserService {
             if (updateUser.age() > 0) user.setAge(updateUser.age());
             if (updateUser.address() != null && !updateUser.address().equals(user.getHomeAddress()))
                 user.setHomeAddress(updateUser.address());
+            if (!updateUser.cars().equals(user.getCars())) user.setCars(updateUser.cars());
 
             return userRepository.save(user);
         }).then();

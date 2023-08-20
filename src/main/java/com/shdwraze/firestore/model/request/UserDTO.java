@@ -1,7 +1,10 @@
 package com.shdwraze.firestore.model.request;
 
 import com.shdwraze.firestore.model.entity.Address;
+import com.shdwraze.firestore.model.entity.Car;
 import lombok.Builder;
+
+import java.util.List;
 
 @Builder
 public record UserDTO(
@@ -12,6 +15,8 @@ public record UserDTO(
 
         int age,
 
-        Address address
+        Address address,
+
+        List<Car> cars
 ) {
 }

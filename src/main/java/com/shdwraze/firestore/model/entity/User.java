@@ -4,6 +4,8 @@ import com.google.cloud.firestore.annotation.DocumentId;
 import com.google.cloud.spring.data.firestore.Document;
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Builder
@@ -22,4 +24,6 @@ public class User {
     private int age;
 
     private Address homeAddress;
+
+    private List<Car> cars;
 }
